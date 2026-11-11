@@ -8,6 +8,10 @@
 
 <sub>Blender 4.4 · Python 7,706 行 / 25 个脚本 · Three.js · 全程零手工建模</sub>
 
+### [▶ 在线体验 · 在浏览器里直接转塔](https://zhangyize044-cyber.github.io/Central-mast-Pagoda-Temples/)
+
+<sub>可旋转 / 缩放、结构剖视（塔心柱 + 八根扒梁）、五机位切换、构件标注。无需安装，无需下载。</sub>
+
 [![Blender](https://img.shields.io/badge/Blender-4.4-E87D0D?logo=blender&logoColor=white)](https://www.blender.org/)
 [![Three.js](https://img.shields.io/badge/Three.js-r186-000000?logo=three.js&logoColor=white)](https://threejs.org/)
 [![License](https://img.shields.io/badge/code-MIT-blue.svg)](./LICENSE)
@@ -128,6 +132,8 @@
 不是把 GLB 丢进 Three.js 就完事。这一层做了：九盏分层灯的阶梯点亮、结构剖视、五个预设机位、构件标注、竖屏自动后撤 1.34 倍（否则 41 m 的塔会顶满屏、塔刹被裁）。
 
 桌面与移动两套尺寸都用 Playwright 做过检核：元素数量、边界不重叠、无横向滚动、零 JS 报错。
+
+**已部署**：<https://zhangyize044-cyber.github.io/Central-mast-Pagoda-Temples/> —— 由 `web/` 构建后内联为单文件，托管在 `gh-pages` 分支（主分支保持轻量）。页面不依赖任何外部请求，断网也能渲染。
 
 ---
 
