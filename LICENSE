@@ -1,0 +1,55 @@
+MIT License
+
+Copyright (c) 2026 zhangyize044-cyber
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+附加说明：分层授权
+================================================================================
+
+本仓库不同部分适用不同许可，请注意区分：
+
+1. 源代码 —— MIT
+   包含 blender/*.py 与 web/**（不含第三方依赖）。
+   可自由使用、修改、分发、商用，保留版权声明即可。
+
+2. 文档与媒体资产 —— CC BY-NC 4.0
+   包含 README.md、docs/**（含全部渲染图）、media/showcase-22s.mp4。
+   Attribution-NonCommercial 4.0 International
+   https://creativecommons.org/licenses/by-nc/4.0/
+   允许转载、改编、非商业使用，须署名并注明来源；不得用于商业用途。
+   如需商业授权，请联系作者。
+
+3. 第三方内容 —— 各自归属原权利人
+   本项目未包含任何第三方摄影作品、模型资产或音频素材。
+   形制数据引自公开资料（正定县人民政府、石家庄市文化广电和旅游局、
+   住房和城乡建设部），仅作学术性重建参考。
+
+================================================================================
+重要声明
+================================================================================
+
+本项目为「正定天宁寺凌霄塔」的**示意性重建**，并非测绘模型，
+不能作为文物修缮、施工或考古研究的依据。
+
+其中牌坊、石渠、石桥、前殿遗址等部分为基于同期寺院制度的推定复原，
+不具备史实效力，不应作为史料引用。
+
+模型的比例、斗拱形制、瓦作细部均为简化表达，按公开数据与照片目测拟合。

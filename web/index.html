@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>凌霄塔 · 正定天宁寺 | 塔院复原</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0705'/%3E%3Cpath d='M16 4 L24 11 L21 11 L21 26 L11 26 L11 11 L8 11 Z' fill='%23C9A24A'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <div class="glow-floor"></div>
+  <div class="vignette"></div>
+  <div class="grain"></div>
+
+  <header class="brand">
+    <div class="seal"><span>凌</span><span>霄</span></div>
+    <div class="brand-txt">
+      <div class="brand-cn">正定 · 天宁寺凌霄塔</div>
+      <div class="brand-en">LINGXIAO PAGODA &nbsp;/&nbsp; TEMPLE PRECINCT RECONSTRUCTION</div>
+    </div>
+  </header>
+
+  <button class="fs" id="fs" type="button" aria-label="全屏">
+    <svg class="fs-in" viewBox="0 0 24 24"><path d="M4 9V4h5M20 15v5h-5M15 4h5v5M9 20H4v-5"/></svg>
+    <svg class="fs-out" viewBox="0 0 24 24"><path d="M9 4v5H4M15 20v-5h5M20 9h-5V4M4 15h5v5"/></svg>
+  </button>
+
+  <aside class="panel">
+    <div class="panel-head">
+      <h1 class="panel-title">凌霄塔</h1>
+      <div class="panel-sub">LINGXIAO&nbsp;PAGODA</div>
+      <button class="panel-toggle" id="panelToggle" type="button" aria-label="展开详情">
+        <svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg>
+      </button>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="metric">
+      <div class="metric-num">40.98<span class="unit">m</span></div>
+      <div class="metric-label">通 高</div>
+    </div>
+
+    <div class="rule"></div>
+
+    <dl class="specs">
+      <div><dt>层级</dt><dd>九级</dd></div>
+      <div><dt>平面</dt><dd>八角形</dd></div>
+      <div><dt>形制</dt><dd>楼阁式塔</dd></div>
+      <div><dt>结构</dt><dd>砖木混合</dd></div>
+    </dl>
+
+    <div class="rule"></div>
+
+    <button class="switch" id="xray" type="button">
+      <span class="sw-mark"></span>
+      <span class="sw-text">结构剖视</span>
+      <span class="sw-hint">塔心柱 · 四层起</span>
+    </button>
+
+    <div class="rule"></div>
+
+    <div class="sect">
+      <div class="sect-k">下部 · 一至三层</div>
+      <div class="sect-v">砖构，斗拱为砖仿木，宋代于唐塔残址上重修</div>
+    </div>
+    <div class="sect">
+      <div class="sect-k">上部 · 四至九层</div>
+      <div class="sect-v">木构，斗拱及各层檐皆木制，金代重建</div>
+    </div>
+    <div class="sect">
+      <div class="sect-k">分期呈现</div>
+      <div class="sect-v">主视觉以极淡色差区分两期：下三层冷青灰、四层以上暖赭，便于读形；仅作呈现辅助，非历史复原色谱</div>
+    </div>
+    <div class="sect">
+      <div class="sect-k">塔心柱 · 国内仅存</div>
+      <div class="sect-v">四层起立木质中心柱，长 17 米，八根扒梁放射状连接塔壁转角；我国现存实物中仅此一例（罗哲文）</div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="sect">
+      <div class="sect-k">院落格局</div>
+      <div class="sect-v">寺南向，中轴自南而北依次为牌坊、石桥、山门、重门、前殿遗址、凌霄塔、后殿</div>
+    </div>
+    <div class="sect">
+      <div class="sect-k">遗存</div>
+      <div class="sect-v">今存凌霄塔、重门、明清古碑八通，及宋槐、清榆各一株</div>
+    </div>
+    <div class="sect">
+      <div class="sect-k">细部</div>
+      <div class="sect-v">屋面逐垄起脊、脊端列走兽；殿身悬匾，斗拱施青绿彩画；墙身下砌青砖墙裙，院墙设壁柱、勒脚与瓦顶</div>
+    </div>
+
+    <div class="rule"></div>
+
+    <dl class="specs dim">
+      <div><dt>始建</dt><dd>唐 · 代宗年间</dd></div>
+      <div><dt>原名</dt><dd>慧光塔</dd></div>
+      <div><dt>文保</dt><dd>第三批全国重点 · 1988</dd></div>
+    </dl>
+  </aside>
+
+  <div class="spots" id="spots"></div>
+
+  <nav class="views" id="views">
+    <button type="button" data-view="full" class="on">全景</button>
+    <button type="button" data-view="low">仰视</button>
+    <button type="button" data-view="top">上部</button>
+    <button type="button" data-view="inner">内部</button>
+    <button type="button" data-view="site">塔院</button>
+  </nav>
+
+  <div class="loader" id="loader">
+    <div class="ring"></div>
+    <div class="loader-txt">正在起塔<span class="dots">···</span></div>
+  </div>
+
+  <footer class="foot">
+    <div class="foot-note">示意性重建 · 非测绘模型，不作修缮依据　·　牌坊／石渠／前殿遗址为推定复原</div>
+    <div class="foot-hint">拖拽旋转　·　滚轮缩放　·　F 全屏</div>
+    <div class="foot-tech">资料据公开资料　/　Blender 4.4 &nbsp;+&nbsp; Three.js</div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

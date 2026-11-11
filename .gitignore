@@ -1,0 +1,53 @@
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# 构建产物（可由源码重建，不入库）
+web/dist/
+web/.vite/
+
+# 模型文件体积大，不入库，但保留目录占位
+web/public/models/*
+!web/public/models/.gitkeep
+
+# Blender 工程与导出模型（体积过大，按需单独提供）
+*.blend
+*.blend1
+*.blend2
+*.glb
+*.gltf
+
+# 渲染中间产物
+blender/frames/
+blender/anim_frames*/
+blender/_*.png
+deliverables/
+shots/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 环境与凭据（永远不要提交）
+.env
+.env.*
+*.key
+*.pem
+*.token
+secrets.json
+
+# 本机路径残留
+*.log
