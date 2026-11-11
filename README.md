@@ -228,6 +228,8 @@ blender -b blender/lingxiao_tower_scene_dusk_period.blend --python blender/build
 
 <sub>如果这个项目对你有帮助，或者你在做古建筑数字化相关的事，欢迎联系交流。</sub>
 
+**延伸阅读**：[《我不建模，我写代码：7,706 行 Python 生成一座 40.98 米的古塔》](./docs/article.md) —— 讲讲那些推翻第一版的判断，以及三个烧掉时间的坑。
+
 ---
 
 <div align="center">
