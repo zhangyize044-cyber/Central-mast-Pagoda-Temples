@@ -153,6 +153,7 @@ lingxiao-tower/
 │   ├── add_reveal.py           场景线⑤：结构 Reveal 开场
 │   ├── compose_score.py        程序化配乐合成
 │   ├── render_*.py             无头渲染（单帧 / 序列）
+│   ├── overlay_endcard.py      短片落版叠字（末段压暗 + 标题淡入）
 │   ├── encode_*.py             VSE 内建 H.264 编码
 │   └── tex/                    程序化生成的贴图
 ├── web/                        Three.js 展示层
